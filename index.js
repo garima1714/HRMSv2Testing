@@ -18,8 +18,12 @@ Navigation.registerComponent(`navigation.playground.WelcomeScreen`, () => App);
 Navigation.events().registerAppLaunchedListener(() => {
       Navigation.setRoot({
     root: {
-      component: {
-        name: "DashBoard"
+      stack: {
+        children :[{
+          component: {
+            name: "DashBoard"
+          }
+        }]
       }
     }
   });

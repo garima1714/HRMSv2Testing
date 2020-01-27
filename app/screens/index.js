@@ -1,9 +1,13 @@
 import { Navigation } from 'react-native-navigation';
 import DashBoard from './DashBoard'
+import TimeSheetExpandedDetails from './TimeSheetExpandedDetails'
+import Testing from './Testing'
 
 export function registerScreens(store, Provider) {
    const screens = {
-      DashBoard
+      DashBoard,
+      TimeSheetExpandedDetails,
+      Testing
    }
 
    Object.keys(screens).map(key => {

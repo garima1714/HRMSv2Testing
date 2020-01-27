@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "E:\\Testing\\HRMS\\HRMSv2Testing\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-ur\\values-ur.xml",
+            "outputFile": "E:\\GitHub_HRMS\\HRMSv2Testing\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-ur\\values-ur.xml",
             "map": [
                 {
                     "source": "C:\\Users\\ganga.singh\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-1.1.0-rc01.aar\\c0c97e19e024a9724293c1d049116e6a\\res\\values-ur\\values-ur.xml",
