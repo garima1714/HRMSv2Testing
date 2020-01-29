@@ -7,7 +7,8 @@ export function registerScreens(store, Provider) {
    const screens = {
       DashBoard,
       TimeSheetExpandedDetails,
-      Testing
+      Testing,
+
    }
 
    Object.keys(screens).map(key => {
