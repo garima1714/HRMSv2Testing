@@ -1,23 +1,30 @@
 import React, { Component } from "react";
-import {Text, View, TouchableOpacity} from 'react-native';
+import {Text, View, TouchableOpacity, ScrollView} from 'react-native';
 import ProgressCircle from 'react-native-progress-circle';
 import Details from '../../components/Details';
 import thunk from "redux-thunk";
-export default class TimeSheetExpandedDetails extends Component {
+import { connect } from 'react-redux';
+class TimeSheetExpandedDetails extends Component {
+
+    constructor(props) {
+        super(props);
+    }
+
 
   state = {
-   showSheet: false,
+   showSheet: true,
    day : "Monday"
   };
 
   render() {
     let content;
+    let contentToShow;
     if(this.state.showSheet=== true){
-        content = (
-            this.props.response.map((infoTimeSheets, index) => (
+        contentToShow = (
+            this.props.timesheet.map((payload, index) => (
                 <Details
                 key={index}
-                infoTimeSheets={infoTimeSheets}/>
+                data={payload}/>
                 ))
         )
     }
@@ -115,12 +122,21 @@ export default class TimeSheetExpandedDetails extends Component {
         </ProgressCircle>
         </TouchableOpacity>
         </View>
+        <ScrollView>
+        <View>{contentToShow}</View>
+        </ScrollView>
         
-        
-
   </View>
     );
 
     return <View>{content}</View>
   }
+
+  
 }
+mapStateToProps=(state)=> {
+    const { days } = state
+    return { timesheet: days.payload }
+}
+
+export default connect(mapStateToProps)(TimeSheetExpandedDetails)

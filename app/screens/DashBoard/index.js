@@ -1,40 +1,30 @@
 import React, { Component } from 'react';
-import { View, Text, TouchableOpacity } from 'react-native';
+import { View, Text, TouchableOpacity, ScrollView } from 'react-native';
 import { connect } from 'react-redux';
 import TimeSheet from '../../components/TimeSheetDetails'
-import { Navigation }  from 'react-native-navigation'
-// import TimeSheet from '../../components/TimeSheetDetails'
+
 class DashBoard extends Component {
-    // onClickHandler = () => {
-    //     Navigation.push(this.props.componentId, {
-    //         component: {
-    //           name: 'Testing',
-    //           passProps: {
-    //             text: 'Pushed screen'
-    //           },
-    //           options: {
-    //             topBar: {
-    //               title: {
-    //                 text: "Hello new screen"
-    //               }
-    //             }
-    //           }
-    //         }
-    //       });
-    //   }
+    
     render() {
+        let content;
+        content = (this.props.timesheet.map((payload, index) => (
+            <TimeSheet
+            key={index}
+            data={payload}
+            {...this.props}/>
+            )))
         return(
             <View>
-                
-                {/* <TouchableOpacity onPress={this.onClickHandler}>
-                    <Text>Hello</Text>
-                </TouchableOpacity> */}
-                <TimeSheet data="hello"  {...this.props}/>
-                {/* <Text>Hello</Text>
-                <TimeSheet {...this.props}/> */}
+                <ScrollView>
+                <View>{content}</View>
+                </ScrollView>
             </View>
         )
     }
 }
+mapStateToProps=(state)=> {
+    const { days } = state
+    return { timesheet: days.payload }
+}
 
-export default connect()(DashBoard);
+export default connect(mapStateToProps)(DashBoard)

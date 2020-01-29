@@ -3,6 +3,8 @@ var width = Dimensions.get("window").width;
 
 const styles = StyleSheet.create({
     type : {
+        flexGrow: 1,
+        backgroundColor:"#E5E5E5",
         borderColor: "#B1B1B1",
         borderTopWidth : 2,
         borderRightWidth : 2,
@@ -15,7 +17,12 @@ const styles = StyleSheet.create({
         overflow : "hidden",
         borderTopLeftRadius: 5,
     },
+    statusText:{
+        textAlign:"center",
+    },
     status : {
+        flexGrow: 1,
+        // backgroundColor:"#E5E5E5",
         borderColor: "#B1B1B1",
         borderTopWidth : 2,
         borderRightWidth : 2,
@@ -28,6 +35,8 @@ const styles = StyleSheet.create({
         borderTopRightRadius : 5,
     },
     details : {
+        flexGrow: 1,
+        backgroundColor:"#EEEEEE",
         borderColor: "#B1B1B1",
         borderRightWidth : 2,
         borderLeftWidth : 2,
@@ -41,6 +50,7 @@ const styles = StyleSheet.create({
         // flexDirection : "row"
     },
     layout : {
+        flexGrow: 1,
         flexDirection: "row",
     },
     typeContent : {
@@ -74,6 +84,18 @@ const styles = StyleSheet.create({
         borderBottomRightRadius : 5,
         flexDirection : "row"
     },
+    fromText: {
+     paddingLeft: 20,
+     fontSize: 15,
+    },
+    toText: {
+        paddingLeft: 35,
+        fontSize: 15,
+    },
+    container:{
+        paddingTop:20,
+        paddingBottom:20,
+    }
 });
 
 export default styles;

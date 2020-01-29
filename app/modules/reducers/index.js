@@ -1,5 +1,6 @@
 import {combineReducers} from 'redux'
 import getTimeSheets from './getTimeSheets'
+import days from './days'
 // import auth from './auth'
 // import uiReducer from './spinnerUI';
 // import compId from './componentId';
@@ -7,7 +8,8 @@ import getTimeSheets from './getTimeSheets'
 
 const rootReducer = combineReducers({
    //TODO
-   timeSheets : getTimeSheets
+   timeSheets : getTimeSheets,
+   days : days
 })
 
 export default rootReducer;

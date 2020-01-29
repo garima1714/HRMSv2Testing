@@ -16,6 +16,49 @@ registerScreens(store, Provider);
 Navigation.registerComponent(`navigation.playground.WelcomeScreen`, () => App);
 
 Navigation.events().registerAppLaunchedListener(() => {
+  Navigation.setDefaultOptions({
+    topBar: {
+      visible: true,
+      drawBehind: true
+      },
+      layout: {
+      orientation: ["portrait"]
+      },
+      animations: {
+      push: {
+      content: {
+      x: {
+      from: 2000,
+      to: 0,
+      duration: 700,
+      }
+      }
+      },
+      pop: {
+      content: {
+      x: {
+      from: 0,
+      to: 2000,
+      duration: 1000,
+      },
+      }
+      }
+      }
+    });
+    // Navigation.setDefaultOptions({
+    //   animations: {
+    //     setRoot: {
+    //       enabled: 'true' | 'false', // Optional, used to enable/disable the animation
+    //       alpha: {
+    //         from: 0,
+    //         to: 1,
+    //         duration: 400,
+    //         startDelay: 100,
+    //         interpolation: 'accelerate'
+    //       }
+    //     }
+    //   }
+    // });
       Navigation.setRoot({
     root: {
       stack: {

@@ -7,6 +7,36 @@ import TimeSheetExpand from '../TimeSheetExpand'
 // import TimeSheetExpand from '../TimeSheetExpand'
 
 export default class TimeSheet extends Component {
+  constructor(props) {
+    super(props);
+  }
+  static options() {
+    return {
+      topBar: {
+        title: {
+          text: 'Shared Element Transition',
+          fontFamily: 'HelveticaNeue-Italic'
+        },
+        backButton: {
+          transition: 'custom'
+        },
+        largeTitle: {
+          visible: false
+        }
+      },
+      animations: {
+        pop: {
+          content: {
+            alpha: {
+              from: 1,
+              to: 0,
+              duration: 250
+            }
+          }
+        }
+      }
+    };
+  }
   state = {
     viewDetail: "short",
     status: "",
@@ -19,7 +49,6 @@ export default class TimeSheet extends Component {
         component: {
           name: 'TimeSheetExpandedDetails',
           passProps: {
-            text: 'Pushed screen',
             response: this.state.response
           },
            options: {
@@ -34,35 +63,12 @@ export default class TimeSheet extends Component {
   }
 
   render() {
-        let TimeSheetRender;
-        let content;
-        // if(this.state.viewDetail== "expand"){
-        //     content = (
-                // this.state.response.map((infoTimeSheets, index) => (
-                //     <TimeSheetExpand
-                //     key={index}
-                //     infoTimeSheets={infoTimeSheets}/>
-                //     ))
-        //         //  <TimeSheetExpand {...this.props}/>
-        //          <TouchableOpacity onPress={this.onClickHandler} {...this.props}>
-        //         <View style={styles.expanded}>
-        //           <View style={styles.day}>
-        //               <Text>{this.props.day} Hello</Text>
-        //           </View>
-        //           <View style={styles.date}>
-        //               <Text>{this.props.date}</Text>
-        //           </View>
-        //       </View>
-        //     </TouchableOpacity>
-                
-        //     )
-        // }
         return(
-            <View>
+            <View style={styles.container}>
           <ScrollView>
           <View style={{flexDirection:"row"}}>
               <View style={styles.type}><Text style={styles.typeContent}>Timesheet</Text></View>
-              <View style={styles.status}></View>
+        <View style={styles.status}><Text style={styles.statusText}>{this.props.data.status}</Text></View>
           </View>
           <TouchableOpacity onPress={this.onClickHandler}>
          
@@ -71,16 +77,15 @@ export default class TimeSheet extends Component {
               <View style={styles.details}>
                   <View style={styles.from}>
                       <Text>From</Text>
-                      <Text> {this.props.From} </Text>
+                      <Text style={styles.fromText}>{this.props.data.from}</Text>
                   </View>
                   <View style={styles.to}>
                       <Text>To</Text>
-                      <Text> {this.props.To}</Text>
+                      <Text style={styles.toText}>{this.props.data.to}</Text>
                   </View>
               </View>
           </View>
         </TouchableOpacity>
-        <View>{content}</View>
           </ScrollView>
         
       </View>
