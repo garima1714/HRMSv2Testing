@@ -22,10 +22,12 @@ Navigation.events().registerAppLaunchedListener(() => {
       drawBehind: true
       },
       layout: {
-      orientation: ["portrait"]
+      orientation: ["portrait"],
+      drawBehind: true
       },
       animations: {
       push: {
+      drawBehind: true,
       content: {
       x: {
       from: 2000,
@@ -35,6 +37,7 @@ Navigation.events().registerAppLaunchedListener(() => {
       }
       },
       pop: {
+        drawBehind: true,
       content: {
       x: {
       from: 0,
@@ -45,20 +48,6 @@ Navigation.events().registerAppLaunchedListener(() => {
       }
       }
     });
-    // Navigation.setDefaultOptions({
-    //   animations: {
-    //     setRoot: {
-    //       enabled: 'true' | 'false', // Optional, used to enable/disable the animation
-    //       alpha: {
-    //         from: 0,
-    //         to: 1,
-    //         duration: 400,
-    //         startDelay: 100,
-    //         interpolation: 'accelerate'
-    //       }
-    //     }
-    //   }
-    // });
       Navigation.setRoot({
     root: {
       stack: {
