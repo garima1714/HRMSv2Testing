@@ -6,7 +6,7 @@ var data = [
         "customer":"dell",
         "project":"mobile app",
         "hours":"8",
-        "company":"Cyber US--Cyber Group Inc.Cyber US--Cyber Group Inc. Cyber US--Cyber Group Inc.",
+        "company":"Cyber US-Cyber Group Cyber US-Cyber Group Cyber US-Cyber Group Cyber US-Cyber Group",
         "to":"23-09-2020",
         "from":"22-02-2020",
         "status":"pending",

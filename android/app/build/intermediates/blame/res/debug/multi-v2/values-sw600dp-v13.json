@@ -1,10 +1,17 @@
 {
     "logs": [
         {
+<<<<<<< HEAD
             "outputFile": "E:\\GitHub_HRMS\\HRMSv2Testing\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-sw600dp-v13\\values-sw600dp-v13.xml",
             "map": [
                 {
                     "source": "C:\\Users\\ganga.singh\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-1.1.0-rc01.aar\\c0c97e19e024a9724293c1d049116e6a\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
+=======
+            "outputFile": "C:\\Users\\garima.sharma\\Desktop\\hrmsnavigationproject\\HRMSv2Testing\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-sw600dp-v13\\values-sw600dp-v13.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\garima.sharma\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-1.1.0-rc01.aar\\3617612d33a1e889d42b0cc35900bd6a\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
+>>>>>>> 525ce6d89457c0a1b4d304f51ce544c554f51414
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9",
                         "startColumns": "4,4,4,4,4,4,4,4",
@@ -14,7 +21,11 @@
                     }
                 },
                 {
+<<<<<<< HEAD
                     "source": "C:\\Users\\ganga.singh\\.gradle\\caches\\transforms-1\\files-1.1\\material-1.1.0-alpha08.aar\\486441f0642248e25e00ee48919179c0\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
+=======
+                    "source": "C:\\Users\\garima.sharma\\.gradle\\caches\\transforms-1\\files-1.1\\material-1.1.0-alpha08.aar\\441a8ec5fd57f75aeec1954c3b632e36\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
+>>>>>>> 525ce6d89457c0a1b4d304f51ce544c554f51414
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,10,11,12,13,14",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4",

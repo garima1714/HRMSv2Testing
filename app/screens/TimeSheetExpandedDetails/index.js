@@ -30,6 +30,14 @@ class TimeSheetExpandedDetails extends Component {
         )
     }
     content= (
+<<<<<<< HEAD
+=======
+        <SafeAreaView>
+
+       
+        <View>
+        
+>>>>>>> 525ce6d89457c0a1b4d304f51ce544c554f51414
         <View>
         <View style={{flexDirection:"row",justifyContent:"space-evenly",padding:10}}>
         <TouchableOpacity day="Monday" {...this.props}>
@@ -123,8 +131,20 @@ class TimeSheetExpandedDetails extends Component {
         </ProgressCircle>
         </TouchableOpacity>
         </View>
+<<<<<<< HEAD
         <ScrollView style={{marginBottom:100}}>{contentToShow}</ScrollView>
         </View>
+=======
+        <View style={{borderTopWidth:2, borderColor:"#F4F2F2"}}/>
+                </View> 
+        <ScrollView>
+           
+        <View>{contentToShow}</View>
+        </ScrollView>
+        
+  </View>
+  </SafeAreaView>
+>>>>>>> 525ce6d89457c0a1b4d304f51ce544c554f51414
     );
 
     return <View>{content}</View>
