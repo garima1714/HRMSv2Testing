@@ -16,38 +16,44 @@ registerScreens(store, Provider);
 Navigation.registerComponent(`navigation.playground.WelcomeScreen`, () => App);
 
 Navigation.events().registerAppLaunchedListener(() => {
-  Navigation.setDefaultOptions({
-    topBar: {
-      visible: true,
-      drawBehind: true
-      },
-      layout: {
-      orientation: ["portrait"],
-      drawBehind: true
-      },
-      animations: {
-      push: {
-      drawBehind: true,
-      content: {
-      x: {
-      from: 2000,
-      to: 0,
-      duration: 700,
-      }
-      }
-      },
-      pop: {
-        drawBehind: true,
-      content: {
-      x: {
-      from: 0,
-      to: 2000,
-      duration: 1000,
-      },
-      }
-      }
-      }
-    });
+  // Navigation.setDefaultOptions({
+  //   topBar: {
+  //     visible: true,
+  //     drawBehind: true
+  //     },
+  //     layout: {
+  //     orientation: ["portrait"],
+  //     drawBehind: false
+  //     },
+  //     animations: {
+  //     push: {
+  //       waitForRender: true,
+  //     // drawBehind: true,
+  //     content: {
+  //     x: {
+  //     from: 100,
+  //     to: 0,
+  //     duration: 200,
+  //     }
+  //     }
+  //     },
+  //     pop: {
+  //     enabled: 'true',
+  //     interpolation: 'decelerate',
+  //     drawBehind: true,
+  //     content: {
+  //         x: {
+  //             background:{
+  //             color:"translucent"
+  //             },
+  //         from: 0,
+  //         to: 700,
+  //         duration: 300,
+  //         },
+  //     },
+  //     }
+  //     }
+  //   });
       Navigation.setRoot({
     root: {
       stack: {
