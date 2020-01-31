@@ -34,7 +34,7 @@ class TimeSheetExpandedDetails extends Component {
 
        
         <View>
-{/*         
+        
         <View>
         <View style={{flexDirection:"row",justifyContent:"space-evenly",padding:10}}>
         <TouchableOpacity day="Monday" {...this.props}>
@@ -129,7 +129,7 @@ class TimeSheetExpandedDetails extends Component {
         </TouchableOpacity>
         </View>
         <View style={{borderTopWidth:2, borderColor:"#F4F2F2"}}/>
-                </View> */}
+                </View> 
         <ScrollView>
            
         <View>{contentToShow}</View>
