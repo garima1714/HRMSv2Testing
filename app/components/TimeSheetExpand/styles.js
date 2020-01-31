@@ -3,11 +3,11 @@ var width = Dimensions.get("window").width;
 
 const styles = StyleSheet.create({
     expanded : {
-        borderColor: "#B1B1B1",
+        borderColor: "#d9d9d9",
         borderRightWidth : 2,
         borderLeftWidth : 2,
         height : 100,
-        borderBottomWidth : 2,
+        borderBottomWidth : 1,
         marginLeft: 15,
         marginRight: 15,
         overflow : "hidden",
