@@ -6,6 +6,8 @@ import thunk from "redux-thunk";
 import { connect } from 'react-redux';
 import {Navigation} from "react-native-navigation"
 import DatePicker from 'react-native-datepicker'
+import { bindActionCreators } from 'redux';
+import fetchSheets from '../../services/api/fetchSheets'
 // import styles from "../../components/Details/styles";
 class TimeSheetExpandedDetails extends Component {
 
@@ -16,18 +18,10 @@ class TimeSheetExpandedDetails extends Component {
     state = {
         modalVisible: false,
     }
-
-    
-    // static options(passProps) {
-    //     return {
-    //       topBar: {
-    //         rightButtons: {
-    //           id: 'UploadSheet',
-    //           icon: require('../../assets/icons/PlusIcon.png')
-    //         }
-    //       }
-    //     };
-    //   }
+    componentWillMount(){
+        const {fetchData} = this.props;
+        fetchData();
+    }
     setModalVisible = (val) => {
         this.setState({modalVisible:val})
     }
@@ -245,4 +239,8 @@ mapStateToProps=(state)=> {
     return { timesheet: days.payload }
 }
 
-export default connect(mapStateToProps)(TimeSheetExpandedDetails)
+const mapDispatchToProps = dispatch => bindActionCreators({
+    fetchData: fetchSheets
+}, dispatch)
+
+export default connect(mapStateToProps,mapDispatchToProps)(TimeSheetExpandedDetails)
