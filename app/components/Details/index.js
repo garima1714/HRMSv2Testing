@@ -47,9 +47,7 @@ export default class Details extends Component {
                 
               </View>
             </View>
-            <View
-             style={{flexDirection:"row"}}
-            >
+            <View style={{flexDirection:"row",justifyContent:"space-between",padding:10,width:"65%"}}>
               <View>
                 <Text style={styles.headingColor}>Project</Text>
                 <Text style={styles.textColor}>{this.props.data.project}</Text>
