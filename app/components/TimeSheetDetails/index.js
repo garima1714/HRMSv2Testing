@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { View, Text, Dimensions, TouchableOpacity, ScrollView } from "react-native";
 import styles from "./styles";
 import { Navigation }  from 'react-native-navigation'
-import TimeSheetExpand from '../TimeSheetExpand'
+// import TimeSheetExpand from '../TimeSheetExpand'
 // import push  from '../../services/Navigation/Navigation'
 // import TimeSheetExpand from '../TimeSheetExpand'
 
@@ -17,24 +17,10 @@ export default class TimeSheet extends Component {
           text: 'Shared Element Transition',
           fontFamily: 'HelveticaNeue-Italic'
         },
-        backButton: {
-          transition: 'custom'
-        },
         largeTitle: {
           visible: false
-        }
+        },
       },
-      animations: {
-        pop: {
-          content: {
-            alpha: {
-              from: 1,
-              to: 0,
-              duration: 250
-            }
-          }
-        }
-      }
     };
   }
   state = {
@@ -47,15 +33,64 @@ export default class TimeSheet extends Component {
    onClickHandler = () => {
     Navigation.push(this.props.componentId, {
         component: {
+          swipeToDismiss: true,
           name: 'TimeSheetExpandedDetails',
           passProps: {
             response: this.state.response
           },
            options: {
+            animations: {
+              pop: {
+                  content: {
+                      alpha: {
+                          from: 1,
+                          to: 0,
+                          duration: 300,
+                          startDelay: 0,
+                          interpolation: 'decelerate',
+                      },
+                      // x: {
+                      //   from: 1,
+                      //   to: 0,
+                      //   duration: 300,
+                      //   interpolation: "decelerate",
+                      // },
+                  },
+              },
+              push: {
+                  waitForRender: true,
+                  content: {
+                      alpha: {
+                          from: 0,
+                          to: 1,
+                          duration: 300,
+                          startDelay: 0,
+                          interpolation: 'accelerate',
+                      },
+                      // scaleX: {
+                      //   from: 0,
+                      //   to: 1,
+                      //   duration: 300,
+                      //   interpolation: "accelerate",
+                      // },
+                    //   x: {
+                    //     from: 1,
+                    //     to: 0,
+                    //     duration: 300,
+                    //     startDelay: 0,
+                    //     interpolation: 'accelerate',
+                    // },
+                  },
+              },
+          },
             topBar: {
               title: {
                 text: "TimeSheet Details"
-              }
+              },
+              rightButtons:[{
+                id:'UploadSheet',
+                icon: require('../../assets/icons/PlusIcon.png'),
+              }]
             }
           }
         }

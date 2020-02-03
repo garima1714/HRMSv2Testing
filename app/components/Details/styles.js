@@ -3,14 +3,14 @@ var width = Dimensions.get("window").width;
 
 const styles = StyleSheet.create({
     detail : {
-        padding: 0,
-        marginTop: 0,
-        margin: 10,
+        // padding: 10,
+        // marginTop: 0,
+        margin: 5,
         borderColor: "#B1B1B1",
         // borderRightWidth : 2,
         // borderLeftWidth : 2,
         // height : 100,
-         width: "80%",
+        //  width: "80%",
         // maxWidth:"100%",
         // borderBottomWidth : 2,
         borderTopWidth : 1,
@@ -18,7 +18,7 @@ const styles = StyleSheet.create({
         borderLeftWidth:1,
         borderRightWidth:1,
         // marginLeft: 20,
-        marginTop: 20,
+        // marginTop: 20,
         // marginRight: 75,
         // overflow : "hidden",
         backgroundColor:"#e6e6e6",
@@ -32,8 +32,8 @@ const styles = StyleSheet.create({
     boundary : {
         borderTopWidth: 1,
         borderColor: "#B0B0B0",
-        marginTop: 0,
-        width : "50%",
+        // marginTop: 0,
+        // width : "50%",
         
     },
     PlusIcon : {
