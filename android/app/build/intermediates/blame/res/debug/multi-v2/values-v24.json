@@ -1,17 +1,10 @@
 {
     "logs": [
         {
-<<<<<<< HEAD
             "outputFile": "E:\\GitHub_HRMS\\HRMSv2Testing\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v24\\values-v24.xml",
             "map": [
                 {
                     "source": "C:\\Users\\ganga.singh\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-1.1.0-rc01.aar\\c0c97e19e024a9724293c1d049116e6a\\res\\values-v24\\values-v24.xml",
-=======
-            "outputFile": "C:\\Users\\garima.sharma\\Desktop\\hrmsnavigationproject\\HRMSv2Testing\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v24\\values-v24.xml",
-            "map": [
-                {
-                    "source": "C:\\Users\\garima.sharma\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-1.1.0-rc01.aar\\3617612d33a1e889d42b0cc35900bd6a\\res\\values-v24\\values-v24.xml",
->>>>>>> 525ce6d89457c0a1b4d304f51ce544c554f51414
                     "from": {
                         "startLines": "2,3",
                         "startColumns": "4,4",
@@ -21,11 +14,7 @@
                     }
                 },
                 {
-<<<<<<< HEAD
                     "source": "C:\\Users\\ganga.singh\\.gradle\\caches\\transforms-1\\files-1.1\\media-1.0.0.aar\\4928f548d0128f8f3c533ca4f7bd83e6\\res\\values-v24\\values-v24.xml",
-=======
-                    "source": "C:\\Users\\garima.sharma\\.gradle\\caches\\transforms-1\\files-1.1\\media-1.0.0.aar\\6e4f0605785c187cdfbc22981728d8ac\\res\\values-v24\\values-v24.xml",
->>>>>>> 525ce6d89457c0a1b4d304f51ce544c554f51414
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",

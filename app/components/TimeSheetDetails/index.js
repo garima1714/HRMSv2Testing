@@ -86,7 +86,11 @@ export default class TimeSheet extends Component {
             topBar: {
               title: {
                 text: "TimeSheet Details"
-              }
+              },
+              rightButtons:[{
+                id:'UploadSheet',
+                icon: require('../../assets/icons/PlusIcon.png'),
+              }]
             }
           }
         }

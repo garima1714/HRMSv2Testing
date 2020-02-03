@@ -39,12 +39,7 @@ const styles = StyleSheet.create({
     PlusIcon : {
         width: 20,
         height: 20,
-<<<<<<< HEAD
-        marginTop: 130,
-        // padding: 20
-=======
         margin:10,
->>>>>>> 525ce6d89457c0a1b4d304f51ce544c554f51414
     },
     textColor : {
         color: "#808080",
@@ -62,18 +57,12 @@ const styles = StyleSheet.create({
         color: "#000080",
         fontSize: 15,
         // width: "80%",
-<<<<<<< HEAD
-        // flexWrap:"wrap",
-        // alignItems:"flex-start",
-        // flexDirection:"row"
-=======
         paddingRight:"14%",
         paddingLeft:"2%",
         flexWrap:"wrap",
         alignItems:"flex-start",
         flexDirection:"row",
         justifyContent:"space-around"
->>>>>>> 525ce6d89457c0a1b4d304f51ce544c554f51414
     }
 });
 

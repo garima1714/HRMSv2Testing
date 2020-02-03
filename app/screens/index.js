@@ -3,11 +3,14 @@ import DashBoard from './DashBoard'
 import TimeSheetExpandedDetails from './TimeSheetExpandedDetails'
 import Testing from './Testing'
 
+import ModalScreen from './ModalEntry'
+
 export function registerScreens(store, Provider) {
    const screens = {
       DashBoard,
       TimeSheetExpandedDetails,
       Testing,
+      ModalScreen
 
    }
 

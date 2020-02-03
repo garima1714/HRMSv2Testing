@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-#Fri Jan 31 13:11:10 IST 2020
+#Mon Feb 03 15:17:57 IST 2020
 base.0=E\:\\GitHub_HRMS\\HRMSv2Testing\\android\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
-=======
-#Thu Jan 30 16:15:31 IST 2020
-base.0=C\:\\Users\\garima.sharma\\Desktop\\hrmsnavigationproject\\HRMSv2Testing\\android\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
->>>>>>> 525ce6d89457c0a1b4d304f51ce544c554f51414
 path.0=classes.dex
 renamed.0=classes.dex
