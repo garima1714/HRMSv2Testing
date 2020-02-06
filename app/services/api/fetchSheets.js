@@ -6,37 +6,27 @@ export function fetchSheets(data) {
     formdata.append('from',data.from)
     formdata.append('to',data.to)
     formdata.append('day',data.day)
-    // var request = new XMLHttpRequest();
-    // request.open('GET','https://localhost:44348/api/values')
-    // request.send();
-    // console.log('success', request);
+    
     return dispatch =>
     
-    fetch('https://localhost:44348/api/values', {
+    fetch('http://172.25.122.36/api/values', {
       method: 'GET',
       headers: {
-        Accept: 'application/json',
+        'Accept': 'application/json',
         'Content-Type': 'application/json',
-        cache: "no-cache",
-        mode: "cors",
-        body: formdata
+        'cache': "no-cache",
+        // 'mode': "cors",
+        'body': formdata
       },
-    //   body: JSON.stringify({
-    //     from: data.from,
-    //     to: data.to,
-    //     day: data.day
-    //   }),
+   
     })
     .then(response => {
       if (response.status >= 200 && response.status < 300) {
-         console.log(response);
+         console.log(response.json());
         
           dispatch(days(response));
       } else {
-        // const error = new Error(response.statusText);
-        // error.response = response;
-        // dispatch(loginError(error));
-        // throw error;
+      
         console.log("error in response not 200")
       }
     })
