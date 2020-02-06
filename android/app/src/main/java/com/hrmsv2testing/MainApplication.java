@@ -90,6 +90,14 @@ public class MainApplication extends NavigationApplication {
           };
           return new ReactGateway(this, isDebug(), host);
       }
+      @Override
+  public void onCreate() {
+    super.onCreate();
+    Security.insertProviderAt(new org.conscrypt.OpenSSLProvider(), 1);
+    SoLoader.init(this, /* native exopackage */ false);
+    initializeFlipper(this); // Remove this line if you don't want Flipper enabled
+  }
+
   
       @Override
       public boolean isDebug() {

@@ -1,16 +1,20 @@
 import {daysTimesheet} from '../../modules/actions/fetchTimesheetDays';
+const axios = require('axios');
 
 function fetchSheets() {
     return dispatch => {
+        console.log("hello")
         // dispatch(daysTimesheet());
-        fetch('http://localhost:44348/api/values')
-        .then(res => res.json())
+        fetch('http://localhost:44348/api/values',"GET",{Accept:"text/xml","Content-Type":"application/json"})
+        .then(res => res)
         .then(res => {
+           
             if(res.error) {
                 throw(res.error);
             }
+            
             dispatch(daysTimesheet(res));
-            return res.products;
+            return res;
         })
         .catch(error => {
             console.log(error)

@@ -18,7 +18,7 @@ class TimeSheetExpandedDetails extends Component {
     state = {
         modalVisible: false,
     }
-    componentWillMount(){
+    componentDidMount(){
         const {fetchData} = this.props;
         fetchData();
     }
