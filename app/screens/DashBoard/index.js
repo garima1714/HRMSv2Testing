@@ -2,8 +2,10 @@ import React, { Component } from 'react';
 import { View, Text, TouchableOpacity, ScrollView } from 'react-native';
 import { connect } from 'react-redux';
 import TimeSheet from '../../components/TimeSheetDetails'
+import {LayoutRoot} from 'react-native-navigation'
 
 class DashBoard extends Component {
+    
     
     render() {
         let content;
@@ -17,6 +19,7 @@ class DashBoard extends Component {
             <View>
                 <ScrollView>
                 <View>{content}</View>
+                {/* <LayoutRoot/> */}
                 </ScrollView>
             </View>
         )

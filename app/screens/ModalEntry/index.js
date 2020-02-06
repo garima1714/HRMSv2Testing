@@ -1,46 +1,72 @@
 import React, {Component} from 'react';
-import {Modal, Text, TouchableHighlight, View, Alert} from 'react-native';
+import {Modal, Text, TouchableHighlight, View, Alert,Picker, TextInput, Button} from 'react-native';
+import { Dropdown } from 'react-native-material-dropdown';
+import {SubmitSheets} from '../../services/api/submitSheet'
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 
-export default class ModalScreen extends Component {
+ class ModalScreen extends Component {
     state = {
         modalVisible: false,
+        language: 'Choose Customer'
       };
-    
-      setModalVisible(visible) {
-        this.setState({modalVisible: visible});
-      }
+    onClickhandler= () => {
+
+        this.props.SubmitSheets(data);
+    }
 
   render() {
+    let data = [{
+      value: 'Hp',
+    }, {
+      value: 'Dell',
+    }, {
+      value: 'Apple',
+    }];
     return (
-      <View style={{marginTop: 22}}>
-        <Modal
-          animationType="slide"
-          transparent={false}
-          visible={this.state.modalVisible}
-          onRequestClose={() => {
-            Alert.alert('Modal has been closed.');
-          }}>
-          <View style={{marginTop: 22}}>
-            <View>
-              <Text>Hello World!</Text>
-
-              <TouchableHighlight
-                onPress={() => {
-                  this.setModalVisible(!this.state.modalVisible);
-                }}>
-                <Text>Hide Modal</Text>
-              </TouchableHighlight>
-            </View>
-          </View>
-        </Modal>
-
-        <TouchableHighlight
-          onPress={() => {
-            this.setModalVisible(true);
-          }}>
-          <Text>Show Modal</Text>
-        </TouchableHighlight>
+      <View style={{padding:20}}>
+        <View>
+          <Text>Customer</Text>
+          <Dropdown
+        label='Choose Customer'
+        data={data}
+         />
+        </View>
+        <View>
+        <Text>Project</Text>
+          <Dropdown
+         
+        label='Choose Project'
+        data={data}
+         />
+        </View>
+        <View >
+        <Text>Task</Text>
+          <Dropdown
+          
+        label='Choose Task'
+        data={data}
+         />
+        </View>
+        <View >
+        <Text>Hours</Text>
+          <TextInput placeholder='Enter Hours'></TextInput>
+        </View>
+        <View>
+        <Text>Company</Text>
+          <Dropdown
+        label='Choose Company'
+        data={data}
+         />
+        </View>
+        <View style={{marginTop:10}}>
+          <Button title='Save and Continue'/>
+        </View>
       </View>
     );
   }
 }
+const mapDispatchToProps = dispatch => bindActionCreators({
+  SubmitSheets
+}, dispatch)
+export default connect(null,mapDispatchToProps)(ModalScreen)
