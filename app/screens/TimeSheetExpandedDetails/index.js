@@ -39,38 +39,7 @@ class TimeSheetExpandedDetails extends Component {
     this.props.fetchSheets(data)
   }
 
-  // clic = async ()  => {
-  //   console.log("before call");
-  //   const response=  await fetch('http://172.25.123.161:44348/api/values', {
-  //   method: 'GET'
-  // headers: {
-  //   Accept: 'application/json',
-  //   'Content-Type': 'application/json',
-  //   cache: "no-cache",
-  //   mode: "cors",
-  //   body: "formdata"
-  // },
-  //   })
-  //   console.log(response.json())
-
-  // }
-
-  getAsync = async (URL) => {
-    console.log("initial")
-    let response = await fetch(URL, {
-      method: 'GET',
-      headers: {
-          Accept: 'application/json',
-          'Content-Type': 'application/json',
-          cache: "no-cache",
-          mode: "cors",
-          body: "formdata"
-        },
-    });
-    console.log("sdsdafas")
-    return response.json();
-  };
-
+  
   state = {
     showSheet: true,
     day: "Monday"
@@ -144,7 +113,7 @@ class TimeSheetExpandedDetails extends Component {
           </View>
           <View>
             <View style={{ flexDirection: "row", justifyContent: "space-evenly", padding: 10, borderWidth: 1, marginLeft: 20, marginRight: 20, marginTop: 10, borderColor: 'grey' }}>
-              <TouchableOpacity day="Monday" onPress={() => this.getAsync('https://localhost:5001/api/values')}>
+              <TouchableOpacity day="Monday" onPress={() => this.ListAsPerDay("Monday")}>
                 <ProgressCircle
                   percent={100}
                   radius={15}
