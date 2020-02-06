@@ -1,6 +1,7 @@
 import { GET_TIMESHEET_DATA } from '../../constants'
+// import Immutable from 'imm';
 import data from '../../dummyData/timesheetData'
-initialState = {
+const initialState = {
   payload:data
   }
 const days = (state = initialState, action) => {
@@ -10,6 +11,7 @@ const days = (state = initialState, action) => {
               ...state,
               data: action.payload
           }
+         
       break;
 
       default:

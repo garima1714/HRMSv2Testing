@@ -8,7 +8,7 @@ var data = [
         "hours":"8",
         "company":"Cyber US-Cyber Group Cyber US-Cyber Group Cyber US-Cyber Group Cyber US-Cyber Group",
         "to":"23-09-2020",
-        "from":"22-02-2020",
+        "from":"Jan 13",
         "status":"pending",
         "day":"monday"
     },
@@ -18,8 +18,8 @@ var data = [
         "project":"mobile app",
         "hours":"8",
         "company":"Cyber",
-        "to":"23-09-2020",
-        "from":"12-02-2020",
+        "to":"Feb 09",
+        "from":"Feb 09",
         "status":"pending",
         "day":"monday"
     },
@@ -29,8 +29,8 @@ var data = [
         "project":"mobile app",
         "hours":"8",
         "company":"cyber",
-        "to":"23-02-2020",
-        "from":"12-02-2020",
+        "to":"Mar 23",
+        "from":"Mar 23",
         "status":"rejected",
         "day":"tuesday"
     },
@@ -41,7 +41,7 @@ var data = [
         "hours":"8",
         "company":"Cyber",
         "to":"23-07-2020",
-        "from":"12-06-2020",
+        "from":"Apr 12",
         "status":"approved",
         "day":"tuesday"
     },
@@ -52,7 +52,7 @@ var data = [
         "hours":"8",
         "company":"Cyber",
         "to":"23-07-2020",
-        "from":"12-06-2020",
+        "from":"May 4",
         "status":"approved",
         "day":"tuesday"
     },
@@ -63,7 +63,7 @@ var data = [
         "hours":"8",
         "company":"Cyber",
         "to":"23-07-2020",
-        "from":"12-06-2020",
+        "from":"Jun 23",
         "status":"approved",
         "day":"tuesday"
     },
@@ -74,7 +74,7 @@ var data = [
         "hours":"8",
         "company":"Cyber",
         "to":"23-07-2020",
-        "from":"12-06-2020",
+        "from":"Jul 11",
         "status":"approved",
         "day":"tuesday"
     },

@@ -10,33 +10,25 @@ export default class TimeSheet extends Component {
   constructor(props) {
     super(props);
   }
-  static options() {
-    return {
-      topBar: {
-        title: {
-          text: 'Shared Element Transition',
-          fontFamily: 'HelveticaNeue-Italic'
-        },
-        largeTitle: {
-          visible: false
-        },
-      },
-    };
-  }
+  
   state = {
     viewDetail: "short",
     status: "",
     title : "TimeSheetDetail",
-    response: []
+    response: [],
+    from: this.props.data.from ,
+    to: this.props.data.to ,
   };
 
    onClickHandler = () => {
     Navigation.push(this.props.componentId, {
         component: {
-          swipeToDismiss: true,
+          // swipeToDismiss: true,
           name: 'TimeSheetExpandedDetails',
           passProps: {
-            response: this.state.response
+            response: null,
+            from: this.state.from,
+            to: this.state.to
           },
            options: {
             animations: {
@@ -49,12 +41,6 @@ export default class TimeSheet extends Component {
                           startDelay: 0,
                           interpolation: 'decelerate',
                       },
-                      // x: {
-                      //   from: 1,
-                      //   to: 0,
-                      //   duration: 300,
-                      //   interpolation: "decelerate",
-                      // },
                   },
               },
               push: {

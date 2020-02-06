@@ -1,15 +1,19 @@
 import { GET_TIMESHEET_DATA_PARTICULAR_RANGE } from '../../constants'
 import data from '../../dummyData/timesheetData'
-initialState = {
+const initialState = new Immutable.Map({
   payload:data
-  }
+  }) 
 const daysTimesheet = (state = initialState, action) => {
+  console.log("Hello I am reducer")
   switch(action.type) {
       case GET_TIMESHEET_DATA_PARTICULAR_RANGE:
-          return {
-              ...state,
-              data: action.payload
-          }
+          // return {
+          //     ...state,
+          //     data: action.payload
+          // }
+          return state.merge({
+            payload: action.payload
+          })
       break;
 
       default:

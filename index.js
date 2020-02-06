@@ -60,9 +60,12 @@ Navigation.events().registerAppLaunchedListener(() => {
         children :[{
           component: {
             name: "DashBoard"
-          }
-        }]
-      }
+          },
+          
+        }],
+        
+      },
+      
     }
   });
 });
